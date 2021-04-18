@@ -19,7 +19,13 @@ class Playlist:
   # The method has one parameters, title, which is the title of the song to be searched for. If the song is found, return its index. Otherwise, return -1.
 
   def find_song(self, title):
-    pass
+    index_position = 0
+    song = self.__first_song
+    while song is not None:
+        if song.get_title() == title:
+            return index_position
+        index_position += 1
+        song = song.get_next_song()
 
 
   # TODO: Create a method called remove_song that removes a song from the playlist. This method takes one parameter, title, which is the song that should be removed. 
