@@ -1,4 +1,4 @@
-from Song import Song
+from Song import Song 
 
 class Playlist:
   def __init__(self):
@@ -10,7 +10,9 @@ class Playlist:
 
   def add_song(self, title):
     new_song = Song(title)
-
+    new_song.set_next_song(self.__first_song)
+    self.__first_song = new_song
+    self.count += 1
 
 
   # TODO: Create a method called find_song that searches for whether a song exits in the playlist and returns its index.
