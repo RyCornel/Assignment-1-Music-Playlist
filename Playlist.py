@@ -66,6 +66,11 @@ class Playlist:
   # 3. Song Title 3
 
   def print_songs(self):
-    pass
+    counter = 1
+    song = self.__first_song
+    while song is not None:
+        print(f"{counter}.{song}")
+        song = song.get_next_song()
+        counter += 1 
 
   
